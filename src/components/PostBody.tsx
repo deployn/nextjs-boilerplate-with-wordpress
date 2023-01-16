@@ -1,6 +1,10 @@
 import styles from '@/styles/PostBody.module.css';
 
-export default function PostBody({ content }) {
+type PostBodyProps = {
+  content: string;
+};
+
+export default function PostBody({ content }: PostBodyProps) {
   return (
     <div className="mx-auto max-w-2xl">
       <div

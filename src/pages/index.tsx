@@ -1,6 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next';
 
 import Layout from '@/components/Layout';
+import Link from '@/components/Link';
 import { getAllPostsForHome } from '@/lib/api';
 
 type IndexProps = {
@@ -43,6 +44,11 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
           </div>
         </section>
       )}
+      <Link href="https://github.com/deployn/nextjs-boilerplate-with-wordpress">
+        Link to Github
+      </Link>
+      <br />
+      <Link href="/">Link to Home</Link>
     </Layout>
   );
 };

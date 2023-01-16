@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import Layout from '@/components/Layout';
+import PostBody from '@/components/PostBody';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 
 type PostProps = {
@@ -38,7 +39,7 @@ export default function Post({ post, posts }: PostProps) {
         <>
           <article>
             <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <PostBody content={post.content} />
           </article>
           {morePosts.length > 0 && (
             <section>

@@ -1,4 +1,5 @@
 import type { GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
 
 import Layout from '@/components/Layout';
 import { getAllPostsForHome } from '@/lib/api';
@@ -29,7 +30,9 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
       {heroPost && (
         <section>
           <h2>Hero Post</h2>
-          <h3>{heroPost.title}</h3>
+          <Link href={`/posts/${heroPost.slug}`}>
+            <h3>{heroPost.title}</h3>
+          </Link>
           <div dangerouslySetInnerHTML={{ __html: heroPost.excerpt }} />
         </section>
       )}

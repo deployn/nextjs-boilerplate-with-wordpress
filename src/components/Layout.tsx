@@ -7,6 +7,13 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
+type PostLayoutProps = {
+  title: string;
+  description?: string;
+  image?: string;
+  children: React.ReactNode;
+};
+
 const Layout = ({ children, ...props }: LayoutProps) => {
   return (
     <>
@@ -17,3 +24,14 @@ const Layout = ({ children, ...props }: LayoutProps) => {
 };
 
 export default Layout;
+
+const PostLayout = ({ children, ...props }: PostLayoutProps) => {
+  return (
+    <>
+      <Meta {...props} />
+      <main>{children}</main>
+    </>
+  );
+};
+
+export { PostLayout };

@@ -2,7 +2,15 @@ import { NextSeo } from 'next-seo';
 
 import { AppConfig } from '@/utils/AppConfig';
 
-const Seo = ({ ...props }) => {
+type SeoProps = {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  url?: string;
+  creator?: string;
+};
+
+const Seo = ({ ...props }: SeoProps) => {
   return (
     <NextSeo
       title={props.title || AppConfig.siteName}

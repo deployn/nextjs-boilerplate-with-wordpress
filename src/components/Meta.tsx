@@ -3,7 +3,13 @@ import { useRouter } from 'next/router';
 
 import Seo from '@/components/Seo';
 
-const Meta = ({ ...props }) => {
+type SeoProps = {
+  title?: string;
+  description?: string;
+  image?: string;
+};
+
+const Meta = ({ ...props }: SeoProps) => {
   const router = useRouter();
   return (
     <>

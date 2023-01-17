@@ -1,9 +1,9 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import ErrorPage from 'next/error';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import Layout from '@/components/Layout';
+import Link from '@/components/Link';
 import PostBody from '@/components/PostBody';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 
@@ -38,6 +38,8 @@ export default function Post({ post, posts }: PostProps) {
       ) : (
         <>
           <article>
+            <Link href="/">Back to home</Link>
+            <br />
             <h1>{post.title}</h1>
             <PostBody content={post.content} />
           </article>

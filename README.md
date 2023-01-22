@@ -3,11 +3,11 @@
 🚀 Boilerplate and Starter for Next.js, Tailwind CSS, TypeScript and WordPress 
 ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, PostCSS, Tailwind CSS.
 
-### Original Boilerplate
+### Attribution
 
-Based on [this Boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
+Based on [this Nextjs-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) and [this Nextjs-with-Wordpress example](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress)
 
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+Some elements from [Tailwind UI](https://tailwindui.com/)
 
 ### Features
 

@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.3.0...v1.4.0) (2023-01-22)
+
+
+### Features
+
+* **Header.tsx:** show active route ([2dabfe4](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/2dabfe4c2e5d932effb8b27c541b3aecb4c955b8))
+
 # [1.3.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.2.0...v1.3.0) (2023-01-22)
 
 

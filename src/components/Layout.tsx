@@ -1,3 +1,4 @@
+import Header from '@/components/Header';
 import Meta from '@/components/Meta';
 
 type LayoutProps = {
@@ -18,6 +19,7 @@ const Layout = ({ children, ...props }: LayoutProps) => {
   return (
     <>
       <Meta {...props} />
+      <Header />
       <main>{children}</main>
     </>
   );

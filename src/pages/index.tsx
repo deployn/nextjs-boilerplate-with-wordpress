@@ -26,7 +26,9 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
 
   return (
     <Layout>
-      <h1>Index</h1>
+      <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+        Index
+      </h1>
       {heroPost && (
         <section>
           <h2>Hero Post</h2>

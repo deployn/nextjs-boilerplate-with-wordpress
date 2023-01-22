@@ -1,10 +1,14 @@
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
 import Link from '@/components/Link';
 
 export default function Header() {
+  const router = useRouter();
+  const { pathname } = router;
+
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto max-w-7xl px-6">
@@ -18,7 +22,12 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="h-8 w-auto sm:h-10"
+                className={[
+                  pathname === '/'
+                    ? 'text-primary-400 hover:text-primary-900'
+                    : 'text-gray-400 hover:text-gray-900',
+                  'h-8 w-auto sm:h-10',
+                ].join(' ')}
               >
                 <path
                   strokeLinecap="round"
@@ -36,12 +45,26 @@ export default function Header() {
           </div>
           <nav className="hidden space-x-10 md:flex">
             <Link href="/about">
-              <span className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <span
+                className={[
+                  'text-base font-medium',
+                  pathname === '/about'
+                    ? 'text-primary-400 hover:text-primary-900'
+                    : 'text-gray-400 hover:text-gray-900',
+                ].join(' ')}
+              >
                 About
               </span>
             </Link>
             <Link href="/contact">
-              <span className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <span
+                className={[
+                  'text-base font-medium',
+                  pathname === '/contact'
+                    ? 'text-primary-400 hover:text-primary-900'
+                    : 'text-gray-400 hover:text-gray-900',
+                ].join(' ')}
+              >
                 Contact
               </span>
             </Link>
@@ -73,7 +96,12 @@ export default function Header() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="h-8 w-auto sm:h-10"
+                      className={[
+                        pathname === '/'
+                          ? 'text-primary-400 hover:text-primary-900'
+                          : 'text-gray-400 hover:text-gray-900',
+                        'h-8 w-auto sm:h-10',
+                      ].join(' ')}
                     >
                       <path
                         strokeLinecap="round"
@@ -94,13 +122,27 @@ export default function Header() {
             <div className="space-y-6 py-6 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link href="/about">
-                  <span className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  <span
+                    className={[
+                      'text-base font-medium',
+                      pathname === '/about'
+                        ? 'text-primary-900 hover:text-primary-700'
+                        : 'text-gray-900 hover:text-gray-700',
+                    ].join(' ')}
+                  >
                     About
                   </span>
                 </Link>
 
                 <Link href="/contact">
-                  <span className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  <span
+                    className={[
+                      'text-base font-medium',
+                      pathname === '/contact'
+                        ? 'text-primary-900 hover:text-primary-700'
+                        : 'text-gray-900 hover:text-gray-700',
+                    ].join(' ')}
+                  >
                     Contact
                   </span>
                 </Link>

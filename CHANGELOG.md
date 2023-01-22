@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.2.0...v1.3.0) (2023-01-22)
+
+
+### Features
+
+* **pages:** bigger heading ([409ff5b](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/409ff5bf45993a0511e8d879993bfcda6abf6903))
+
 # [1.2.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.1.0...v1.2.0) (2023-01-22)
 
 

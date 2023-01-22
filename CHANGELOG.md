@@ -1,3 +1,14 @@
+# [1.2.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.1.0...v1.2.0) (2023-01-22)
+
+
+### Features
+
+* create about and contact page for navigation ([932fee7](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/932fee7cabb9487e39c1418ada2475fd6d33fc59))
+* **Header.tsx:** create header component ([ccd17d7](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/ccd17d72a71ed7173a5915ceb9226402617bc701))
+* **Layout.tsx:** add header to layout ([08b30e0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/08b30e0a94fc9117998ced28fabe033245c81db4))
+* **package.json:** install headlessui and heroicons ([368c247](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/368c24742a9ae95738b00f9bab6e482315565d24))
+* **posts/[slug].tsx:** use layout instead of postlayout ([c3cc0b9](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/c3cc0b9baf91bbec7ea0bc462d5b1425480f2984))
+
 # [1.1.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.0.0...v1.1.0) (2023-01-17)
 
 

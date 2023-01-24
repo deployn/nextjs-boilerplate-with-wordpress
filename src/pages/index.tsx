@@ -1,4 +1,5 @@
 import type { GetStaticProps, NextPage } from 'next';
+import { useEffect, useState } from 'react';
 
 import Layout from '@/components/Layout';
 import Link from '@/components/Link';
@@ -21,6 +22,29 @@ type IndexProps = {
 };
 
 const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
+  const [statusCookie, setStatusCookie] = useState('');
+
+  const getCookie = (name: any) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) {
+      const cookie = parts.pop();
+      if (cookie) {
+        return cookie.split(';').shift();
+      }
+    }
+    return null;
+  };
+
+  useEffect(() => {
+    const acceptedCookie = getCookie('acceptedCookies');
+    if (acceptedCookie === 'true') {
+      setStatusCookie('accepted');
+    } else {
+      setStatusCookie('not accepted');
+    }
+  }, [statusCookie]);
+
   const heroPost = edges[0]?.node;
   const morePosts = edges.slice(1);
 
@@ -29,6 +53,8 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
       <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
         Index
       </h1>
+      <p>Cookies: {statusCookie}</p>
+
       {heroPost && (
         <section>
           <h2 className="mb-4 text-2xl font-medium">Hero Post</h2>

@@ -1,6 +1,8 @@
 import Header from '@/components/Header';
 import Meta from '@/components/Meta';
 
+import CookieBanner from './CookieBanner';
+
 type LayoutProps = {
   title?: string;
   description?: string;
@@ -21,6 +23,7 @@ const Layout = ({ children, ...props }: LayoutProps) => {
       <Meta {...props} />
       <Header />
       <main>{children}</main>
+      <CookieBanner />
     </>
   );
 };

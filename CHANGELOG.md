@@ -1,3 +1,16 @@
+# [1.7.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.6.0...v1.7.0) (2023-01-24)
+
+
+### Bug Fixes
+
+* **Layout.tsx:** wrap content into a grid to stick footer to have the footer at the bottom ([9ca4584](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/9ca4584ac1305885754b35eb3e1f8f3729c22d5a))
+
+
+### Features
+
+* **Footer.tsx:** add footer component ([feda0fa](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/feda0fa9e79abc4342dc470479b3607317cae29d))
+* **Footer.tsx:** make footer a little bit brighter for more contrast with the cookiebanner ([1ea425b](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/1ea425bb77299cbc43c74bcd8aa67fef624c9572))
+
 # [1.6.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.5.0...v1.6.0) (2023-01-24)
 
 

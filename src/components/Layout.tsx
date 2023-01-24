@@ -21,9 +21,13 @@ const Layout = ({ children, ...props }: LayoutProps) => {
   return (
     <>
       <Meta {...props} />
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <div className="grid min-h-screen grid-rows-1">
+        <div className="flex-1">
+          <Header />
+          <main>{children}</main>
+        </div>
+        <Footer />
+      </div>
       <CookieBanner />
     </>
   );

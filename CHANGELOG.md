@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.5.0...v1.6.0) (2023-01-24)
+
+
+### Features
+
+* **index.tsx:** add some styles ([988b4a0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/988b4a0ded130866940a7437dc5e845c36e70a55))
+
 # [1.5.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.4.0...v1.5.0) (2023-01-24)
 
 

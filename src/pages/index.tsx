@@ -83,11 +83,6 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
           </ul>
         </section>
       )}
-      <Link href="https://github.com/deployn/nextjs-boilerplate-with-wordpress">
-        Link to Github
-      </Link>
-      <br />
-      <Link href="/">Link to Home</Link>
     </Layout>
   );
 };

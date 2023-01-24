@@ -1,7 +1,7 @@
+import CookieBanner from '@/components/CookieBanner';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Meta from '@/components/Meta';
-
-import CookieBanner from './CookieBanner';
 
 type LayoutProps = {
   title?: string;
@@ -21,8 +21,13 @@ const Layout = ({ children, ...props }: LayoutProps) => {
   return (
     <>
       <Meta {...props} />
-      <Header />
-      <main>{children}</main>
+      <div className="grid min-h-screen grid-rows-1">
+        <div className="flex-1">
+          <Header />
+          <main>{children}</main>
+        </div>
+        <Footer />
+      </div>
       <CookieBanner />
     </>
   );

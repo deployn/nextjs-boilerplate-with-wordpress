@@ -2,7 +2,7 @@ import Link from '@/components/Link';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 py-12 text-white">
+    <footer className="bg-gray-800 py-12 text-white">
       <div className="container mx-auto flex flex-wrap items-center">
         <div className="w-full text-center md:w-1/2 md:text-left">
           <h2 className="mb-4 text-lg font-medium">About Us</h2>

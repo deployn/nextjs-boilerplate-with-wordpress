@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.4.0...v1.5.0) (2023-01-24)
+
+
+### Features
+
+* **CookieBanner.tsx:** add cookiebanner component ([b8e9577](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/b8e95774a9a4e88ef80ddbe8b27b4ad5ba5b66c5))
+* **Index.tsx:** show on index page if cookies were accepted ([e50ed82](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/e50ed829bfd667a40b89cd77cc3d1068e2f50372))
+* **Layout.tsx:** add cookiebanner to layout ([bf1100b](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/bf1100b46a9e5b3ca820a90bd660427ea243aa78))
+
 # [1.4.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.3.0...v1.4.0) (2023-01-22)
 
 

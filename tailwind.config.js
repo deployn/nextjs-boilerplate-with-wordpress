@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line import/no-extraneous-dependencies
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -17,7 +20,11 @@ module.exports = {
           900: '#7c1f3a',
         },
       },
+      fontFamily: {
+        primary: ['var(--font-primary)', ...fontFamily.sans],
+        heading: ['var(--font-heading)', ...fontFamily.serif],
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };

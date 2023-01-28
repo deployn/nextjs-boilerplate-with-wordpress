@@ -1,7 +1,19 @@
+import { Assistant, Playfair_Display } from '@next/font/google';
+
 import CookieBanner from '@/components/CookieBanner';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Meta from '@/components/Meta';
+
+const primaryFont = Assistant({
+  subsets: ['latin'],
+  variable: '--font-primary',
+});
+
+const headingFont = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-heading',
+});
 
 type LayoutProps = {
   title?: string;
@@ -19,7 +31,7 @@ type PostLayoutProps = {
 
 const Layout = ({ children, ...props }: LayoutProps) => {
   return (
-    <>
+    <div className={`${primaryFont.variable} ${headingFont.variable}`}>
       <Meta {...props} />
       <div className="grid min-h-screen grid-rows-1">
         <div className="flex-1">
@@ -29,7 +41,7 @@ const Layout = ({ children, ...props }: LayoutProps) => {
         <Footer />
       </div>
       <CookieBanner />
-    </>
+    </div>
   );
 };
 

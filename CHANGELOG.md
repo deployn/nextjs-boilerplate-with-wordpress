@@ -1,3 +1,11 @@
+# [1.8.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.7.0...v1.8.0) (2023-01-28)
+
+
+### Features
+
+* add local google fonts ([4cc2cf2](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/4cc2cf2fa23f0c3e0c9e22f8225b670100cd46c5))
+* **index.tsx:** add some fonts for testing purpose ([13c109f](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/13c109f8b706a1b0e7f1f0cb6f8c485d84c15ce2))
+
 # [1.7.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.6.0...v1.7.0) (2023-01-24)
 
 

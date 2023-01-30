@@ -1,3 +1,6 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable no-underscore-dangle */
 import { ApolloClient, from, HttpLink, InMemoryCache } from '@apollo/client';
 import { concatPagination } from '@apollo/client/utilities';
 import merge from 'deepmerge';
@@ -65,8 +68,9 @@ export function initializeApollo(initialState = null) {
 }
 
 export function addApolloState(client: any, pageProps: any) {
+  const extractedState = client.cache.extract();
   if (pageProps?.props) {
-    pageProps.props[APOLLO_STATE_PROP_NAME] = client.cache.extract();
+    pageProps.props[APOLLO_STATE_PROP_NAME] = extractedState;
   }
 
   return pageProps;

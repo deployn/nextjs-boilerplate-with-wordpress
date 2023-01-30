@@ -1,4 +1,5 @@
 import { gql, useQuery } from '@apollo/client';
+import HTMLReactParser from 'html-react-parser';
 import DOMPurify from 'isomorphic-dompurify';
 
 export const ALL_POSTS_QUERY = gql`
@@ -37,9 +38,9 @@ const PostList = () => {
       {allPosts.edges.map((post: any) => {
         const sanitizedHTML = DOMPurify.sanitize(post.node.content);
         return (
-          <li key={post.node.id}>
-            <h2>{post.node.title}</h2>
-            <p>{sanitizedHTML}</p>
+          <li key={post.node.id} className="mb-8">
+            <h2 className="mb-2">{post.node.title}</h2>
+            <div>{HTMLReactParser(sanitizedHTML)}</div>
           </li>
         );
       })}

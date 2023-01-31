@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.8.0...v1.9.0) (2023-01-31)
+
+
+### Features
+
+* add impulse.dev for live editing of tailwind classes ([e49d3c9](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/e49d3c90dcfbac6ef3bc95f111df79f3ec1cc3b5))
+
 # [1.8.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.7.0...v1.8.0) (2023-01-28)
 
 

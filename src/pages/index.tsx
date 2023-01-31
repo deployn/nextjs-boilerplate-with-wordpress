@@ -50,7 +50,7 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
 
   return (
     <Layout>
-      <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+      <h1 className="m-4 text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
         Index
       </h1>
       <p className="mb-8 font-primary">Cookies: {statusCookie}</p>

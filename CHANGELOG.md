@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.9.0...v1.10.0) (2023-02-01)
+
+
+### Features
+
+* **Link:** link components uses internal link when it's the domain in the appconfig ([229c7b0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/229c7b0d0332c8da0e1525abeeb1976bd1daca7d))
+
 # [1.9.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.8.0...v1.9.0) (2023-01-31)
 
 

@@ -1,29 +1,41 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-param-reassign */
-import type { HTMLReactParserOptions } from 'html-react-parser';
-import HTMLReactParser, { Element } from 'html-react-parser';
+import type { DOMNode, Element } from 'html-react-parser';
+import parse, { domToReact } from 'html-react-parser';
 import Dompurify from 'isomorphic-dompurify';
 
 import styles from '@/styles/PostBody.module.css';
+
+import Link from './Link';
 
 type PostBodyProps = {
   content: string;
 };
 
-export default function PostBody({ content }: PostBodyProps) {
-  const options: HTMLReactParserOptions = {
-    replace: (domNode) => {
-      if (domNode instanceof Element && domNode.attribs) {
-        if (domNode.name === 'a') {
-          domNode.attribs.class = 'text-blue-500 hover:underline';
-        }
-      }
-    },
-  };
+function domNodeIsElement(domNode: DOMNode): domNode is Element {
+  return domNode.type === 'tag';
+}
 
+const parser = (input: string) =>
+  parse(input, {
+    replace: (domNode) => {
+      if (!domNodeIsElement(domNode)) return;
+      if (domNode.name === 'a' && domNode.attribs.href) {
+        return (
+          <Link href={domNode.attribs.href}>
+            {domToReact(domNode.children)}
+          </Link>
+        );
+      }
+      return domNode;
+    },
+  });
+
+export default function PostBody({ content }: PostBodyProps) {
   return (
     <div className="mx-auto max-w-2xl">
       <div className={styles.content}>
-        {HTMLReactParser(Dompurify.sanitize(content), options)}
+        {parser(Dompurify.sanitize(content))}
       </div>
     </div>
   );

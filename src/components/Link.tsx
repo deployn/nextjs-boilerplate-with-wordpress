@@ -2,7 +2,12 @@ import NextLink from 'next/link';
 
 import ExternalLink from '@/components/ExternalLink';
 
-const wpDomain = process.env.WORDPRESS_API_URL as string;
+// WordPress API URL without /graphql
+
+const wpDomain = process.env.WORDPRESS_API_URL?.replace(
+  '/graphql',
+  ''
+) as string;
 
 const style = {
   base: 'text-primary-500 hover:text-primary-700 transition duration-150 ease-in-out cursor-pointer focus:underline focus:text-primary-700 focus:shadow-outline focus:shadow-outline-blue',

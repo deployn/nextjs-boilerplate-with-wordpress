@@ -21,9 +21,17 @@ type LinkProps = {
 
 const Link = ({ href, children, className, ...props }: LinkProps) => {
   const classes = [style.base, className].join(' ');
-  if (href.toString().startsWith('/') || href.toString().startsWith(wpDomain)) {
+  if (href.toString().startsWith('/')) {
     return (
       <NextLink href={href} className={classes} {...props}>
+        {children}
+      </NextLink>
+    );
+  }
+  if (href.toString().startsWith(wpDomain)) {
+    const shortHref = href.toString().replace(wpDomain, '');
+    return (
+      <NextLink href={shortHref} className={classes} {...props}>
         {children}
       </NextLink>
     );

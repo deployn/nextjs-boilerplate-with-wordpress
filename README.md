@@ -35,6 +35,7 @@ Developer experience first:
 - ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 - 💯 Maximize lighthouse score
 - ✍️ Blogposts with headless Wordpress
+- ✅ Live editing of Tailwind CSS classes with [Impulse](https://impulse.dev)
 
 Built-in feature from Next.js:
 

@@ -1,6 +1,9 @@
 import NextLink from 'next/link';
 
 import ExternalLink from '@/components/ExternalLink';
+import { AppConfig } from '@/utils/AppConfig';
+
+const domain = AppConfig.siteUrl;
 
 // WordPress API URL without /graphql
 
@@ -15,13 +18,18 @@ const style = {
 
 type LinkProps = {
   href: string;
-  children: React.ReactNode;
+  children: React.ReactNode | React.ReactNode[] | string;
   className?: string;
 };
 
 const Link = ({ href, children, className, ...props }: LinkProps) => {
   const classes = [style.base, className].join(' ');
-  if (href.toString().startsWith('/')) {
+
+  if (
+    href.toString().startsWith('/') ||
+    href.toString().startsWith(domain) ||
+    href.toString().startsWith('http://localhost')
+  ) {
     return (
       <NextLink href={href} className={classes} {...props}>
         {children}

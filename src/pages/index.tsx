@@ -50,14 +50,14 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
 
   return (
     <Layout>
-      <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+      <h1 className="m-4 text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
         Index
       </h1>
-      <p>Cookies: {statusCookie}</p>
+      <p className="mb-8 font-primary">Cookies: {statusCookie}</p>
 
       {heroPost && (
-        <section>
-          <h2 className="mb-4 text-2xl font-medium">Hero Post</h2>
+        <section className="mb-8">
+          <h2 className="mb-4 font-heading text-2xl font-medium">Hero Post</h2>
           <Link className="mb-2 block" href={`/posts/${heroPost.slug}`}>
             <h3 className="text-xl font-medium">{heroPost.title}</h3>
           </Link>
@@ -68,7 +68,7 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
         </section>
       )}
       {morePosts.length > 0 && (
-        <section>
+        <section className="mb-8">
           <h2 className="mb-4 text-2xl font-medium">More Posts</h2>
           <ul className="list-none">
             {morePosts.map(({ node }) => (

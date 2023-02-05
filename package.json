@@ -117,8 +117,5 @@
       "@semantic-release/github"
     ]
   },
-  "author": "Deployn (https://github.com/deployn)",
-  "optionalDependencies": {
-    "fsevents": "^2.3.2"
-  }
+  "author": "Deployn (https://github.com/deployn)"
 }

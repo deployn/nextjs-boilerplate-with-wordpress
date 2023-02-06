@@ -33,6 +33,7 @@
     "isomorphic-dompurify": "^0.26.0",
     "lodash": "^4.17.21",
     "next": "^13.1.6",
+    "next-plausible": "^3.7.1",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.49",
     "react": "^18.2.0",

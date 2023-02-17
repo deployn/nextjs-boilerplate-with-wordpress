@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.11.0...v1.12.0) (2023-02-17)
+
+
+### Features
+
+* add support for selfhosted plausible or umami ([6b311e0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/6b311e0e186db800dcfe61493a46ba3d18e77c0f))
+
+
+### Reverts
+
+* **deps:** revert fsevents ([ec44eec](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/ec44eec42be36c2b5276bd25586e048f7f998241))
+
 # [1.11.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.10.0...v1.11.0) (2023-02-04)
 
 

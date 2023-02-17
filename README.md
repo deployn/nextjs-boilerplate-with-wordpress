@@ -36,6 +36,7 @@ Developer experience first:
 - 💯 Maximize lighthouse score
 - ✍️ Blogposts with headless Wordpress
 - ✅ Live editing of Tailwind CSS classes with [Impulse](https://impulse.dev)
+- 📊 Analytics with selfhosted [Plausible](https://plausible.io) or [Umami](https://umami.is)
 
 Built-in feature from Next.js:
 

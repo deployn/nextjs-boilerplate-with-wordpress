@@ -10,18 +10,38 @@
   @apply text-right;
 }
 
+.has-small-font-size {
+  @apply text-sm;
+}
+
 .has-large-font-size {
   @apply text-4xl;
 }
 
-.alignfull {
-  @apply w-screen relative;
+.has-x-large-font-size {
+  @apply text-5xl;
+}
 
+.has-xx-large-font-size {
+  @apply text-6xl;
+}
+
+.alignwide {
+  @apply w-screen relative px-4;
   left: 50%;
+  right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   max-width: 100vw;
+}
+
+.alignfull {
+  @apply w-screen relative px-1;
+  left: 50%;
   right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
 }
 
 .wp-block-image img {
@@ -74,7 +94,7 @@
 }
 
 .wp-block-cover {
-  @apply flex flex-wrap justify-center items-center bg-cover bg-center overflow-hidden;
+  @apply justify-center items-center bg-cover bg-center overflow-hidden grid;
 
   min-height: 430px;
 }
@@ -89,4 +109,28 @@
 
 .wp-block-columns {
   @apply flex gap-4
+}
+
+.has-base-color {
+  @apply text-zinc-50;
+}
+
+.has-base-background-color {
+  @apply bg-zinc-50;
+}
+
+.has-contrast-color {
+  @apply text-zinc-900;
+}
+
+.has-contrast-background-color {
+  @apply bg-zinc-900;
+}
+
+.has-primary-color {
+  @apply text-primary-500;
+}
+
+.has-primary-background-color {
+  @apply bg-primary-500;
 }

@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.12.0...v1.13.0) (2023-02-19)
+
+
+### Features
+
+* load youtube video only after visitor gave consent ([0b95fa1](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/0b95fa153c99d5ef03cfbefab78a543ba478d6ac))
+
 # [1.12.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.11.0...v1.12.0) (2023-02-17)
 
 

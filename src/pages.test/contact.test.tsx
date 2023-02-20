@@ -15,4 +15,48 @@ describe('Contact page', () => {
       expect(heading).toBeInTheDocument();
     });
   });
+
+  describe('Form', () => {
+    it('should have input for name', () => {
+      render(<Contact />);
+
+      const input = screen.getByLabelText(/name/i);
+
+      expect(input).toBeInTheDocument();
+    });
+
+    it('should have input for email', () => {
+      render(<Contact />);
+
+      const input = screen.getByLabelText(/email/i);
+
+      expect(input).toBeInTheDocument();
+    });
+
+    it('should have input for message', () => {
+      render(<Contact />);
+
+      const input = screen.getByLabelText(/message/i);
+
+      expect(input).toBeInTheDocument();
+    });
+  });
+
+  describe('Form validation', () => {
+    it('should have error message if empty', async () => {
+      render(<Contact />);
+
+      const submitButton = screen.getByRole('button', { name: /submit/i });
+
+      submitButton.click();
+
+      const errorMessages = await screen.findAllByText(
+        /This field is required/i
+      );
+
+      const errorMessage = errorMessages[0];
+
+      expect(errorMessage).toBeInTheDocument();
+    });
+  });
 });

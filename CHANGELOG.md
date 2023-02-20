@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.13.0...v1.14.0) (2023-02-20)
+
+
+### Features
+
+* add contact form ([bf3f9c6](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/bf3f9c6b049bce20bb288162ea5f315a609afbaf))
+
 # [1.13.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.12.0...v1.13.0) (2023-02-19)
 
 

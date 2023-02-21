@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import Layout from '@/components/Layout';
 import PostBody from '@/components/PostBody';
-import { getPostBySlug } from '@/lib/posts';
+import { getAllPosts, getPostBySlug } from '@/lib/posts';
 
 export default function Post({ post }: any) {
   const router = useRouter();
@@ -43,5 +43,28 @@ export async function getStaticProps({ params }: any) {
     props: {
       post,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const { posts } = await getAllPosts({
+    queryIncludes: 'index',
+  });
+
+  let paths: any = [];
+
+  if (posts) {
+    paths = posts
+      .filter(({ slug }: any) => typeof slug === 'string')
+      .map(({ slug }: any) => ({
+        params: {
+          slug,
+        },
+      }));
+  }
+
+  return {
+    paths,
+    fallback: 'blocking',
   };
 }

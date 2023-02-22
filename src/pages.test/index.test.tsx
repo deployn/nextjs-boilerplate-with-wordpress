@@ -2,17 +2,59 @@ import { render, screen } from '@testing-library/react';
 
 import Index from '@/pages/index';
 
-// The easiest solution to mock `next/router`: https://github.com/vercel/next.js/issues/7479
-// The mock has been moved to `__mocks__` folder to avoid duplication
+jest.mock('@/lib/posts', () => ({
+  getAllPosts: jest.fn(() => Promise.resolve({ posts: [] })),
+}));
 
-describe('Index page', () => {
-  describe('Render method', () => {
-    it('should have h1 tag', () => {
-      render(<Index allPosts={{ edges: [] }} />);
+jest.mock('@/lib/apollo', () => ({
+  initializeApollo: jest.fn(() => ({
+    query: jest.fn(() => Promise.resolve({ data: {} })),
+  })),
+}));
 
-      const heading = screen.getByRole('heading', { level: 1 });
+describe('Index', () => {
+  it('renders without crashing', async () => {
+    render(<Index allPosts={{ posts: [] }} />);
+    expect(screen.getByText('Index')).toBeInTheDocument();
+  });
 
-      expect(heading).toBeInTheDocument();
+  it('renders more posts', async () => {
+    const morePosts = [
+      {
+        title: 'More Post 1',
+        slug: 'more-post-1',
+      },
+      {
+        title: 'More Post 2',
+        slug: 'more-post-2',
+      },
+    ];
+    render(<Index allPosts={{ posts: morePosts }} />);
+    morePosts.forEach((post) => {
+      expect(screen.getByText(post.title)).toBeInTheDocument();
     });
+  });
+
+  it('renders cookies', async () => {
+    render(<Index allPosts={{ posts: [] }} />);
+    expect(screen.getByText('Cookies: not accepted')).toBeInTheDocument();
+  });
+
+  it('renders cookies accepted', async () => {
+    Object.defineProperty(window.document, 'cookie', {
+      writable: true,
+      value: 'acceptedCookies=true',
+    });
+    render(<Index allPosts={{ posts: [] }} />);
+    expect(screen.getByText('Cookies: accepted')).toBeInTheDocument();
+  });
+
+  it('renders cookies not accepted', async () => {
+    Object.defineProperty(window.document, 'cookie', {
+      writable: true,
+      value: 'acceptedCookies=false',
+    });
+    render(<Index allPosts={{ posts: [] }} />);
+    expect(screen.getByText('Cookies: not accepted')).toBeInTheDocument();
   });
 });

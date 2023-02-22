@@ -1,89 +1,70 @@
-import type { GetStaticPaths, GetStaticProps } from 'next';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 
 import Layout from '@/components/Layout';
-import Link from '@/components/Link';
 import PostBody from '@/components/PostBody';
-import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
+import { getAllPosts, getPostBySlug } from '@/lib/posts';
 
-type PostProps = {
-  post: {
-    title: string;
-    content: string;
-    slug: string;
-  };
-  posts: {
-    edges: {
-      node: {
-        title: string;
-        slug: string;
-      };
-    }[];
-  };
-};
-
-export default function Post({ post, posts }: PostProps) {
+export default function Post({ post }: any) {
   const router = useRouter();
-  const morePosts = posts?.edges;
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
 
   return (
-    <>
+    <Layout>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
-        <Layout title={post.title}>
-          <Link href="/">Back to home</Link>
+        <>
           <article>
-            <h1>{post.title}</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+              {post.title}
+            </h1>
             <PostBody content={post.content} />
           </article>
-          {morePosts.length > 0 && (
-            <section>
-              <h2>More Posts</h2>
-              <ul>
-                {morePosts.map((iPost) => (
-                  <li key={iPost.node.slug}>
-                    <Link href={`/posts/${iPost.node.slug}`}>
-                      {iPost.node.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-        </Layout>
+        </>
       )}
-    </>
+    </Layout>
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({
-  params,
-  preview = false,
-  previewData,
-}: any) => {
-  const data = await getPostAndMorePosts(params?.slug, preview, previewData);
+export async function getStaticProps({ params }: any) {
+  const { post } = await getPostBySlug(params.slug);
+
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
-      preview,
-      post: data.post,
-      posts: data.posts,
+      post,
     },
-    revalidate: 10,
   };
-};
+}
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const allPosts = await getAllPostsWithSlug();
+export async function getStaticPaths() {
+  const { posts } = await getAllPosts({
+    queryIncludes: 'index',
+  });
+
+  let paths: any = [];
+
+  if (posts) {
+    paths = posts
+      .filter(({ slug }: any) => typeof slug === 'string')
+      .map(({ slug }: any) => ({
+        params: {
+          slug,
+        },
+      }));
+  }
 
   return {
-    paths: allPosts.edges.map(({ node }: any) => `/posts/${node.slug}`) || [],
-    fallback: true,
+    paths,
+    fallback: 'blocking',
   };
-};
+}

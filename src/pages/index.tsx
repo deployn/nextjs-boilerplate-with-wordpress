@@ -1,27 +1,20 @@
-import type { GetStaticProps, NextPage } from 'next';
+import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
 import Layout from '@/components/Layout';
 import Link from '@/components/Link';
-import { getAllPostsForHome } from '@/lib/api';
+import { getAllPosts } from '@/lib/posts';
 
 type IndexProps = {
   allPosts: {
-    edges: {
-      node: {
-        title: string;
-        excerpt: string;
-        slug: string;
-        date: string;
-        coverImage: {
-          url: string;
-        };
-      };
+    posts: {
+      title: string;
+      slug: string;
     }[];
   };
 };
 
-const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
+const Index: NextPage<IndexProps> = ({ allPosts: { posts } }) => {
   const [statusCookie, setStatusCookie] = useState('');
 
   const getCookie = (name: any) => {
@@ -45,8 +38,8 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
     }
   }, [statusCookie]);
 
-  const heroPost = edges[0]?.node;
-  const morePosts = edges.slice(1);
+  const heroPost = posts[0];
+  const morePosts = posts.slice(1);
 
   return (
     <Layout>
@@ -61,22 +54,16 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
           <Link className="mb-2 block" href={`/posts/${heroPost.slug}`}>
             <h3 className="text-xl font-medium">{heroPost.title}</h3>
           </Link>
-          <div
-            className="mb-6"
-            dangerouslySetInnerHTML={{ __html: heroPost.excerpt }}
-          />
         </section>
       )}
       {morePosts.length > 0 && (
         <section className="mb-8">
           <h2 className="mb-4 text-2xl font-medium">More Posts</h2>
           <ul className="list-none">
-            {morePosts.map(({ node }) => (
-              <li key={node.slug} className="mb-4">
-                <Link className="block" href={`/posts/${node.slug}`}>
-                  <h3 className="text-xl font-medium" key={node.slug}>
-                    {node.title}
-                  </h3>
+            {morePosts.map((post) => (
+              <li key={post.slug}>
+                <Link className="mb-2 block" href={`/posts/${post.slug}`}>
+                  <h3 className="text-xl font-medium">{post.title}</h3>
                 </Link>
               </li>
             ))}
@@ -89,11 +76,14 @@ const Index: NextPage<IndexProps> = ({ allPosts: { edges } }) => {
 
 export default Index;
 
-export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
-  const allPosts = await getAllPostsForHome(preview);
+export async function getStaticProps() {
+  const allPosts = await getAllPosts({
+    queryIncludes: 'index',
+  });
 
   return {
-    props: { allPosts, preview },
-    revalidate: 1,
+    props: {
+      allPosts,
+    },
   };
-};
+}

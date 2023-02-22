@@ -35,16 +35,28 @@
   list-style: circle;
 }
 
+.content h1 {
+  @apply text-4xl mt-16 mb-4 leading-snug font-heading;
+}
+
 .content h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug font-heading;
 }
 
 .content h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug font-heading;
 }
 
 .content h4 {
-  @apply text-xl mt-6 mb-4 leading-snug;
+  @apply text-xl mt-6 mb-4 leading-snug font-heading;
+}
+
+.content h5 {
+  @apply text-lg mt-6 mb-4 leading-snug font-heading;
+}
+
+.content h6 {
+  @apply text-base mt-6 mb-4 leading-snug font-heading;
 }
 
 .content pre {
@@ -53,6 +65,10 @@
 
 .content code {
   @apply text-sm;
+}
+
+.content p code {
+  @apply bg-gray-200 p-1;
 }
 
 .content figcaption {
@@ -73,4 +89,8 @@
 
 .content audio {
   @apply w-full;
+}
+
+.content kbd {
+  @apply inline-block bg-gray-200 border border-gray-400 rounded px-2 py-1 text-sm;
 }

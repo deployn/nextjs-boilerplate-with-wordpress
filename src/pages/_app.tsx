@@ -9,7 +9,7 @@ import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import PlausibleProvider from 'next-plausible';
 
-import { useApollo } from '@/lib/apolloClient';
+import { useApollo } from '@/lib/apollo';
 import { AppConfig } from '@/utils/AppConfig';
 
 if (process.env.NODE_ENV === 'development') {

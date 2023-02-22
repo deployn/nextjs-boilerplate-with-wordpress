@@ -4,7 +4,7 @@ import {
   QUERY_ALL_POSTS_INDEX,
   QUERY_POST_BY_SLUG,
 } from '@/data/posts';
-import { initializeApollo } from '@/lib/apolloClient';
+import { initializeApollo } from '@/lib/apollo';
 
 /**
  * postPathBySlug

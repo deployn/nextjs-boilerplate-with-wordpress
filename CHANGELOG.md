@@ -1,3 +1,17 @@
+# [1.15.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.14.0...v1.15.0) (2023-02-22)
+
+
+### Features
+
+* add some wordpress styles ([949d17a](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/949d17a6c96ed077bb77b22e670ec0d9ac5551d4))
+* sort by date ([64e8efb](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/64e8efb4af2a051def373f9ec693e74f1cf12cc1))
+* update wordpress post fetching ([97a47be](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/97a47be7670c3df5f799367b39e2fae8a13d06ef))
+
+
+### Reverts
+
+* **Link:** don't handle wpdomain links as internal ([3eec669](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/3eec6693563ebc0d07f996e3a04a47ca9d854d32))
+
 # [1.14.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.13.0...v1.14.0) (2023-02-20)
 
 

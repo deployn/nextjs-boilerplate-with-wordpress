@@ -1,3 +1,50 @@
+# [1.14.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.13.0...v1.14.0) (2023-02-20)
+
+
+### Features
+
+* add contact form ([bf3f9c6](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/bf3f9c6b049bce20bb288162ea5f315a609afbaf))
+
+# [1.13.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.12.0...v1.13.0) (2023-02-19)
+
+
+### Features
+
+* load youtube video only after visitor gave consent ([0b95fa1](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/0b95fa153c99d5ef03cfbefab78a543ba478d6ac))
+
+# [1.12.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.11.0...v1.12.0) (2023-02-17)
+
+
+### Features
+
+* add support for selfhosted plausible or umami ([6b311e0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/6b311e0e186db800dcfe61493a46ba3d18e77c0f))
+
+
+### Reverts
+
+* **deps:** revert fsevents ([ec44eec](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/ec44eec42be36c2b5276bd25586e048f7f998241))
+
+# [1.11.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.10.0...v1.11.0) (2023-02-04)
+
+
+### Bug Fixes
+
+* **Link:** update link component to use internel link when starts with  wpDomain ([b1282a1](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/b1282a1c4de88820952b5a4c9bcfec592cd74129))
+
+
+### Features
+
+* **_app:** wrap into apolloclient ([6acc681](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/6acc681f6bc7bc57634a2c8f77308fb301d5c10c))
+* **apollo:** add page to test the postlist ([5d8a2d4](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/5d8a2d4b1548acefb9f69150be43e6869620860a))
+* **Apolloclient:** add apolloclient ([7371f81](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/7371f8135bce14346b36cf42b49490ca846285a9))
+* **Link:** treat link to wp domain as internal ([b16aff6](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/b16aff618d71e77a2ca8cb7d580ea077fcc4d472))
+* **next.config.js:** image optimisation for wordpress images ([d20e664](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/d20e664b0a4acd1759ad76b77e9fbb54fc5206f1))
+* **PostBody:** transform <a> into <Link> ([3bf3f00](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/3bf3f00aa3ce2a30156f74968c257bf43a4d25ed))
+* **PostBody:** use htmlreactparser instead of dangerouslysetinnerhtml ([1deb264](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/1deb264dd04e354a45f2ffb171def8f40e65443c))
+* **PostList:** add a postlist component to fetch 10 posts with apollo ([dd5a1e3](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/dd5a1e33240de8e318fd951f073c0005f4c6abb9))
+* **PostList:** add html react parser ([ccda68a](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/ccda68a48e98a0e91f8e4bc42a4cbefc06e3ded2))
+* **wordpress.css:** add flex to column blocks ([26dea44](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/26dea44b693a55b9565285856e689cd9e707315a))
+
 # [1.10.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.9.0...v1.10.0) (2023-02-01)
 
 

@@ -36,6 +36,7 @@ Developer experience first:
 - 💯 Maximize lighthouse score
 - ✍️ Blogposts with headless Wordpress
 - ✅ Live editing of Tailwind CSS classes with [Impulse](https://impulse.dev)
+- 📊 Analytics with selfhosted [Plausible](https://plausible.io) or [Umami](https://umami.is)
 
 Built-in feature from Next.js:
 
@@ -52,6 +53,7 @@ Built-in feature from Next.js:
 ### Requirements
 
 - Node.js 14+ and npm
+- WordPress CMS with GraphQL endpoint
 
 ### Commit Message Format
 
@@ -96,6 +98,6 @@ Pro tips: if you need a project wide type checking with TypeScript, you can run 
 
 ### Contributions
 
-Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
+Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.  Totally open to any suggestions and improvements.
 
 ---

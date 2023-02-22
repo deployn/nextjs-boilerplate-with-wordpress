@@ -9,4 +9,7 @@ export const AppConfig = {
   twitterSite: '@site',
   twitterCardType: 'summary_large_image',
   siteUrl: 'https://domain.com',
+  plausibleUrl: '',
+  umamiScriptUrl: '',
+  umamiWebsiteId: '',
 };

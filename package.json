@@ -1,6 +1,6 @@
 {
   "name": "next-js-boilerplate-with-wordpress",
-  "version": "1.10.0",
+  "version": "1.14.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +10,7 @@
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next out",
     "lint": "next lint",
-    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write",
+    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
     "test": "jest",
     "commit": "cz",
@@ -34,10 +34,12 @@
     "isomorphic-dompurify": "^0.26.0",
     "lodash": "^4.17.21",
     "next": "^13.1.6",
+    "next-plausible": "^3.7.1",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.49",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
@@ -91,7 +93,7 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "rimraf": "^4.1.2",
-    "semantic-release": "^20.1.0",
+    "semantic-release": "^19.0.5",
     "start-server-and-test": "^1.15.3",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.5"

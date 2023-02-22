@@ -2,17 +2,19 @@ import { render, screen } from '@testing-library/react';
 
 import Index from '@/pages/index';
 
-// The easiest solution to mock `next/router`: https://github.com/vercel/next.js/issues/7479
-// The mock has been moved to `__mocks__` folder to avoid duplication
+jest.mock('@/lib/posts', () => ({
+  getAllPosts: jest.fn(() => Promise.resolve({ posts: [] })),
+}));
 
-describe('Index page', () => {
-  describe('Render method', () => {
-    it('should have h1 tag', () => {
-      render(<Index allPosts={{ edges: [] }} />);
+jest.mock('@/lib/apollo', () => ({
+  initializeApollo: jest.fn(() => ({
+    query: jest.fn(() => Promise.resolve({ data: {} })),
+  })),
+}));
 
-      const heading = screen.getByRole('heading', { level: 1 });
-
-      expect(heading).toBeInTheDocument();
-    });
+describe('Index', () => {
+  it('renders without crashing', async () => {
+    render(<Index allPosts={{ posts: [] }} />);
+    expect(screen.getByText('Index')).toBeInTheDocument();
   });
 });

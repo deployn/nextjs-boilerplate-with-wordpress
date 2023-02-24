@@ -25,6 +25,6 @@ module.exports = {
         heading: ['var(--font-heading)', ...fontFamily.serif],
       },
     },
-    plugins: [],
   },
+  plugins: [],
 };

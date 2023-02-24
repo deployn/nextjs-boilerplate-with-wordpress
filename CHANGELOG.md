@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.0...v1.15.1) (2023-02-24)
+
+
+### Bug Fixes
+
+* **tailwind config:** move plugins outside of theme ([e75a1b6](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/e75a1b68901142e6bd3c4d2a81eabf5c72bfe295))
+
 # [1.15.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.14.0...v1.15.0) (2023-02-22)
 
 

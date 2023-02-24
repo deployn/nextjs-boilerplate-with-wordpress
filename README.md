@@ -5,7 +5,7 @@
 
 ### Attribution
 
-Based on [this Nextjs-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) and [this Nextjs-with-Wordpress example](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress)
+Based on [this Nextjs-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) and [this Nextjs-with-Wordpress and Apollo example](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress) and [this Next-wordpress-starter](https://github.com/colbyfayock/next-wordpress-starter)
 
 Some elements from [Tailwind UI](https://tailwindui.com/)
 

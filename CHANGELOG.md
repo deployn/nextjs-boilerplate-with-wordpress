@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.1...v1.15.2) (2023-03-03)
+
+
+### Bug Fixes
+
+* update for build-in next/font ([c1f863b](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/c1f863b3dd7843f43ee1ef2f6fb5b3cf67c168b7))
+
 ## [1.15.1](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.0...v1.15.1) (2023-02-24)
 
 

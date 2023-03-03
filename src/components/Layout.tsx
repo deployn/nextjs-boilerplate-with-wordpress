@@ -1,4 +1,4 @@
-import { Assistant, Playfair_Display } from '@next/font/google';
+import { Assistant, Playfair_Display } from 'next/font/google';
 
 import CookieBanner from '@/components/CookieBanner';
 import Footer from '@/components/Footer';

@@ -15,6 +15,7 @@ type IndexProps = {
 };
 
 const Index: NextPage<IndexProps> = ({ allPosts: { posts } }) => {
+  const [hasMounted, setHasMounted] = useState(false);
   const [statusCookie, setStatusCookie] = useState('');
 
   const getCookie = (name: any) => {
@@ -37,6 +38,14 @@ const Index: NextPage<IndexProps> = ({ allPosts: { posts } }) => {
       setStatusCookie('not accepted');
     }
   }, [statusCookie]);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
 
   const heroPost = posts[0];
   const morePosts = posts.slice(1);

@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.2...v1.15.3) (2023-03-07)
+
+
+### Bug Fixes
+
+* prevent hydration error on index page ([ae5f893](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/ae5f893d72960dfdd0cecf145e62bec51a970b13))
+
 ## [1.15.2](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.1...v1.15.2) (2023-03-03)
 
 

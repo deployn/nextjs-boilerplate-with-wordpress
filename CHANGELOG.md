@@ -1,3 +1,10 @@
+## [1.15.4](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.3...v1.15.4) (2023-03-09)
+
+
+### Bug Fixes
+
+* remove protocol from plausible domain ([d6b4f51](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/d6b4f51308f2d1b0b0596c2bca7d59ff7e070372)), closes [#24](https://github.com/deployn/nextjs-boilerplate-with-wordpress/issues/24)
+
 ## [1.15.3](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.2...v1.15.3) (2023-03-07)
 
 

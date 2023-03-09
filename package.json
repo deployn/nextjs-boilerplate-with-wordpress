@@ -1,6 +1,6 @@
 {
   "name": "next-js-boilerplate-with-wordpress",
-  "version": "1.15.3",
+  "version": "1.15.4",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

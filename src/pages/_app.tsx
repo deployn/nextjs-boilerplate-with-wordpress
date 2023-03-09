@@ -24,10 +24,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const apolloClient = useApollo(pageProps);
 
   if (AppConfig.plausibleUrl !== '') {
+    const domain = AppConfig.plausibleUrl.replace(/(^\w+:|^)\/\//, '');
+
     return (
       <PlausibleProvider
         customDomain={AppConfig.plausibleUrl}
-        domain={AppConfig.siteUrl}
+        domain={domain}
         selfHosted={true}
       >
         <ApolloProvider client={apolloClient}>

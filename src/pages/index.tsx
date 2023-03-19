@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 import Layout from '@/components/Layout';
 import Link from '@/components/Link';
+import { deleteCookie, getCookie } from '@/lib/cookies';
 import { getAllPosts } from '@/lib/posts';
 
 type IndexProps = {
@@ -15,40 +16,12 @@ type IndexProps = {
 };
 
 const Index: NextPage<IndexProps> = ({ allPosts: { posts } }) => {
-  const [hasMounted, setHasMounted] = useState(false);
-  const [statusCookie, setStatusCookie] = useState('');
-
-  const getCookie = (name: any) => {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) {
-      const cookie = parts.pop();
-      if (cookie) {
-        return cookie.split(';').shift();
-      }
-    }
-    return null;
-  };
+  const [statusCookie, setStatusCookie] = useState<string | null>(null);
 
   useEffect(() => {
     const acceptedCookie = getCookie('acceptedCookies');
-    if (acceptedCookie === 'true') {
-      setStatusCookie('accepted');
-    } else {
-      setStatusCookie('not accepted');
-    }
-  }, [statusCookie]);
-
-  useEffect(() => {
-    setHasMounted(true);
+    setStatusCookie(acceptedCookie === 'true' ? 'accepted' : 'not accepted');
   }, []);
-
-  if (!hasMounted) {
-    return null;
-  }
-
-  const heroPost = posts[0];
-  const morePosts = posts.slice(1);
 
   return (
     <Layout>
@@ -56,29 +29,36 @@ const Index: NextPage<IndexProps> = ({ allPosts: { posts } }) => {
         Index
       </h1>
       <p className="mb-8 font-primary">Cookies: {statusCookie}</p>
-
-      {heroPost && (
+      <button
+        className="mb-8"
+        onClick={() => {
+          deleteCookie('acceptedCookies');
+          setStatusCookie('not accepted');
+        }}
+      >
+        Delete Cookie
+      </button>
+      {posts[0] && (
         <section className="mb-8">
-          <h2 className="mb-4 font-heading text-2xl font-medium">Hero Post</h2>
-          <Link className="mb-2 block" href={`/posts/${heroPost.slug}`}>
-            <h3 className="text-xl font-medium">{heroPost.title}</h3>
+          <h2 className="mb-4 font-heading text-2xl font-medium">Last Post</h2>
+          <Link className="mb-2 block" href={`/posts/${posts[0].slug}`}>
+            <h3 className="text-xl font-medium">{posts[0].title}</h3>
           </Link>
         </section>
       )}
-      {morePosts.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-medium">More Posts</h2>
-          <ul className="list-none">
-            {morePosts.map((post) => (
-              <li key={post.slug}>
-                <Link className="mb-2 block" href={`/posts/${post.slug}`}>
-                  <h3 className="text-xl font-medium">{post.title}</h3>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+
+      <section className="mb-8">
+        <h2 className="mb-4 text-2xl font-medium">More Posts</h2>
+        <ul className="list-none">
+          {posts.slice(1).map((post) => (
+            <li key={post.slug}>
+              <Link className="mb-2 block" href={`/posts/${post.slug}`}>
+                <h3 className="text-xl font-medium">{post.title}</h3>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </Layout>
   );
 };

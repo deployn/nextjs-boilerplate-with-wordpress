@@ -22,15 +22,15 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.9",
-    "@headlessui/react": "^1.7.12",
+    "@apollo/client": "^3.7.10",
+    "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
     "date-fns": "^2.29.3",
-    "deepmerge": "^4.3.0",
-    "dompurify": "^3.0.0",
+    "deepmerge": "^4.3.1",
+    "dompurify": "^3.0.1",
     "graphql": "^16.6.0",
-    "html-react-parser": "^3.0.9",
-    "isomorphic-dompurify": "^1.0.0",
+    "html-react-parser": "^3.0.15",
+    "isomorphic-dompurify": "^1.2.0",
     "lodash": "^4.17.21",
     "next": "^13.2.1",
     "next-plausible": "^3.7.2",
@@ -38,7 +38,7 @@
     "next-sitemap": "^3.1.52",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.43.2"
+    "react-hook-form": "^7.43.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
@@ -54,9 +54,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/date-fns": "^2.6.0",
-    "@types/dompurify": "^2.4.0",
+    "@types/dompurify": "^3.0.0",
     "@types/jest": "^29.4.0",
-    "@types/lodash": "^4.14.191",
+    "@types/lodash": "^4.14.192",
     "@types/node": "^18.14.1",
     "@types/react": "^18.0.28",
     "@typescript-eslint/eslint-plugin": "^5.53.0",

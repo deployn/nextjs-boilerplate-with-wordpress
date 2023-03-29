@@ -1,4 +1,4 @@
-# Boilerplate for Next JS 13+, Tailwind CSS 3.2, TypeScript and WordPress
+# Boilerplate for Next JS 13+, Tailwind CSS 3.3, TypeScript and WordPress
 
 🚀 Boilerplate and Starter for Next.js, Tailwind CSS, TypeScript and WordPress 
 ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, PostCSS, Tailwind CSS.
@@ -74,7 +74,7 @@ $ npm run build
 $ npm run start
 ```
 
-The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
+The generated HTML and CSS files are minified (built-in feature from Next js). It will also remove unused CSS from [Tailwind CSS](https://tailwindcss.com).
 
 You can create an optimized production build with:
 

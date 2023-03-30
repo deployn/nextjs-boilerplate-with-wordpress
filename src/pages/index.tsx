@@ -23,19 +23,18 @@ const Index: NextPage<IndexProps> = ({ allPosts: { posts } }) => {
     setStatusCookie(acceptedCookie === 'true' ? 'accepted' : 'not accepted');
   }, []);
 
+  const handleDeleteCookie = () => {
+    deleteCookie('acceptedCookies');
+    setStatusCookie('not accepted');
+  };
+
   return (
     <Layout>
       <h1 className="m-4 text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
         Index
       </h1>
       <p className="mb-8 font-primary">Cookies: {statusCookie}</p>
-      <button
-        className="mb-8"
-        onClick={() => {
-          deleteCookie('acceptedCookies');
-          setStatusCookie('not accepted');
-        }}
-      >
+      <button className="mb-8" onClick={handleDeleteCookie}>
         Delete Cookie
       </button>
       {posts[0] && (

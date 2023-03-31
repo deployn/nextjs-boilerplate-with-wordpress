@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.4...v1.16.0) (2023-03-31)
+
+
+### Features
+
+* add some wp content styles ([778fc57](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/778fc57b1927e606eae5477071c6c19c2bd720e2))
+
 ## [1.15.4](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.3...v1.15.4) (2023-03-09)
 
 

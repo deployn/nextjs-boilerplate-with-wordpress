@@ -1,4 +1,4 @@
-# Boilerplate for Next JS 13+, Tailwind CSS 3.2, TypeScript and WordPress
+# Boilerplate for Next JS 13+, Tailwind CSS 3.3, TypeScript and WordPress
 
 🚀 Boilerplate and Starter for Next.js, Tailwind CSS, TypeScript and WordPress 
 ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, PostCSS, Tailwind CSS.

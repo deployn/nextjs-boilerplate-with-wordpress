@@ -52,7 +52,7 @@ Built-in feature from Next.js:
 
 ### Requirements
 
-- Node.js 14+ and npm
+- Node.js 16+ and npm
 - WordPress CMS with GraphQL endpoint
 
 ### Commit Message Format

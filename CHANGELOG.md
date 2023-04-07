@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.16.0...v2.0.0) (2023-04-07)
+
+
+### Continuous Integration
+
+* drop node 14 support and update deps and main test to node 18 ([a8aa340](https://github.com/deployn/nextjs-boilerplate-with-wordpress/commit/a8aa3406f6fc86b64a518608a27acbc18b57bb0f))
+
+
+### BREAKING CHANGES
+
+* no test for node 14
+
 # [1.16.0](https://github.com/deployn/nextjs-boilerplate-with-wordpress/compare/v1.15.4...v1.16.0) (2023-03-31)
 
 

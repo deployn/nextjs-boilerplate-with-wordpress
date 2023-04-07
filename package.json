@@ -22,9 +22,9 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.10",
+    "@apollo/client": "^3.7.11",
     "@headlessui/react": "^1.7.13",
-    "@heroicons/react": "^2.0.16",
+    "@heroicons/react": "^2.0.17",
     "date-fns": "^2.29.3",
     "deepmerge": "^4.3.1",
     "dompurify": "^3.0.1",
@@ -32,7 +32,7 @@
     "html-react-parser": "^3.0.15",
     "isomorphic-dompurify": "^1.2.0",
     "lodash": "^4.17.21",
-    "next": "^13.2.4",
+    "next": "^13.3.0",
     "next-plausible": "^3.7.2",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.52",
